@@ -8,46 +8,98 @@
     color: black;
 }
 
-#main_container{
-        max-width: 1440px;
-        /*Centering the main container to the center using margin property*/
-        margin: 0 auto;
 
-        /*bg -color needed to be removed after styling  #4444*/
-        background-color: burlywood;
+@media only screen and (min-width: 316px) {
+    #main_container{
+            max-width: 1440px;
+            /*Centering the main container to the center using margin property*/
+            margin: 0 auto;
+
+            /*bg -color needed to be removed after styling  #4444*/
+            background-color: rgb(104, 209, 33);
+    }
+
+    #navigation_container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        align-items: center;
+        padding: 30px 20px;
+
+        /*border needed to be removed after styling #4444*/
+        border:1px solid rgb(167, 54, 26);
+    }
+
+    #navigation_container .user_name_logo_container{
+        width: 135.75px;
+        border-color: red;
+    }
+
+    #navigation_container .user_name_logo_container img{
+        width: 100%;
+        vertical-align: bottom;
+    }
+
+    #navigation_container .nav_buttons_container ul{
+        /* display: flex;
+        gap:20px;
+        flex-wrap: wrap; */
+        display: none;
+    }
+
+
 }
 
-#navigation_container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    align-items: center;
-    padding: 30px 20px;
+/* for min width 769px to 1199 */
+/*@media only screen and (min-width: 769px){
 
-    /*border needed to be removed after styling #4444*/
-    border:1px solid blue;
-}
+}*/
 
-#navigation_container .user_name_logo_container{
-    width: 237px;
-    border-color: red;
-}
 
-#navigation_container .user_name_logo_container img{
-    width: 100%;
-    vertical-align: bottom;
-}
 
-#navigation_container .nav_buttons_container ul{
-    display: flex;
-    gap:20px;
-    flex-wrap: wrap;
-}
+/*For min width 1200 to up*/
+@media only screen and (min-width: 1200px) {
+    #main_container{
+            max-width: 1440px;
+            /*Centering the main container to the center using margin property*/
+            margin: 0 auto;
 
-#navigation_container .nav_buttons_container ul>li{
-    padding: 4px 7px;
-}
+            /*bg -color needed to be removed after styling  #4444*/
+            background-color: burlywood;
+    }
 
-#navigation_container .nav_buttons_container ul>li:hover{
-    background-color: aqua;
+    #navigation_container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        align-items: center;
+        padding: 30px 20px;
+
+        /*border needed to be removed after styling #4444*/
+        border:1px solid blue;
+    }
+
+    #navigation_container .user_name_logo_container{
+        width: 237px;
+        border-color: red;
+    }
+
+    #navigation_container .user_name_logo_container img{
+        width: 100%;
+        vertical-align: bottom;
+    }
+
+    #navigation_container .nav_buttons_container ul{
+        display: flex;
+        gap:20px;
+        flex-wrap: wrap;
+    }
+
+    #navigation_container .nav_buttons_container ul>li{
+        padding: 4px 7px;
+    }
+
+    #navigation_container .nav_buttons_container ul>li:hover{
+        background-color: aqua;
+    }    
 }
