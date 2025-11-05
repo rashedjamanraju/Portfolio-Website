@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Nav with Hamburger</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Hamburger icon */
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Transform bars into X when active */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* Nav container */
+.nav_buttons_container {
+  margin-top: 20px;
+}
+
+/* Hide menu by default */
+.nav_buttons_container ul {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Show menu when toggled */
+.show {
+  display: flex !important;
+}
+
+/* Menu items */
+.nav_buttons_container li {
+  border-bottom: 1px solid #eee;
+}
+
+.nav_buttons_container li:last-child {
+  border-bottom: none;
+}
+
+.nav_buttons_container li a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  transition: 0.3s;
+}
+
+.nav_buttons_container li a:hover {
+  background: #eaeaea;
+}
+
+.menu-item-icon {
+  width: 20px;
+  text-align: center;
+}
+
+/* Optional: For larger screens, show nav horizontally */
+@media (min-width: 768px) {
+  .container {
+    display: none; /* hide hamburger on big screens */
+  }
+
+  .nav_buttons_container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: none;
+    border: none;
+  }
+
+  .nav_buttons_container li {
+    border: none;
+  }
+
+  .nav_buttons_container li a {
+    border-radius: 5px;
+  }
+
+  .nav_buttons_container li a:hover {
+    background: #f2f2f2;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="for_low_size_screen">
+    
+</div>
+<!-- Hamburger Icon -->
+<div class="container" onclick="toggleMenu(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
+<!-- Navigation Menu -->
+<nav class="nav_buttons_container">
+  <ul id="menuLinks">
+    <li><a href="#"><i class="fas fa-briefcase menu-item-icon"></i><span>Experience</span></a></li>
+    <li><a href="#"><i class="fas fa-trophy menu-item-icon"></i><span>Achievements</span></a></li>
+    <li><a href="#"><i class="fas fa-tools menu-item-icon"></i><span>Skills</span></a></li>
+    <li><a href="#"><i class="fas fa-brain menu-item-icon"></i><span>Problem Solving</span></a></li>
+    <li><a href="#"><i class="fas fa-puzzle-piece menu-item-icon"></i><span>Problem Setting</span></a></li>
+    <li><a href="#"><i class="fas fa-folder-open menu-item-icon"></i><span>Projects</span></a></li>
+    <li><a href="#"><i class="fas fa-briefcase menu-item-icon"></i><span>More</span><i class="fas fa-chevron-down"></i></a></li>
+  </ul>
+</nav>
+
+<script>
+function toggleMenu(x) {
+  x.classList.toggle("change"); // animate icon
+  document.getElementById("menuLinks").classList.toggle("show"); // toggle menu visibility
+}
+</script>
+
+</body>
+</html>
