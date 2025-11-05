@@ -43,3 +43,11 @@
     gap:20px;
     flex-wrap: wrap;
 }
+
+#navigation_container .nav_buttons_container ul>li{
+    padding: 4px 7px;
+}
+
+#navigation_container .nav_buttons_container ul>li:hover{
+    background-color: aqua;
+}
