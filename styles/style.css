@@ -32,7 +32,6 @@
 
   #navigation_container .user_name_logo_container {
     width: 237px;
-    /* border-color: red; #4444 */
   }
 
   #navigation_container .user_name_logo_container img {
@@ -50,8 +49,13 @@
     padding: 4px 7px;
   }
 
+  #navigation_container .nav_buttons_container ul > li> a >span{
+    font-size: 14px;
+    font-weight: 500;
+  }
+
   #navigation_container .nav_buttons_container ul > li:hover {
-    background-color: rgb(218, 235, 235);
+    color: #1ea155;
     /* rotate: calc(360); */
     background: #eaeaea;
    animation: vibrate 0.3s linear;
@@ -91,13 +95,44 @@
     opacity: .75;
     font-size: 22px;
     margin-top: 60px;
+    line-height: 1.6;
   }
+
+    #hero_area .text_section .p1{
+        max-width: 755px;
+    }
+
+    #hero_area .text_section .p2{
+        max-width: 791.67px;
+    }
 
   #hero_area .text_section .social_media_section ul{
     display: flex;
     gap: 10px;
   }
 
+.main_btn{
+    background-color: #1ea155;
+    border: 1px solid #1ea155;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 50px;
+    margin-top: 20px;
+    padding: 13px 22px;
+    text-align: center;
+  }
+
+  .main_btn:hover{
+    background-color: #0b7e3b;
+    color: #fff;
+    transform: translateY(-3px);
+    transition: all .3s 
+ease 0s;
+  }
   .hero_image_section {
     width: 328px;
     min-width: 258px;
