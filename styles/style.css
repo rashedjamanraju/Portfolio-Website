@@ -455,3 +455,19 @@ html {
   vertical-align: middle;
   white-space: nowrap;
 }
+
+
+#skills {
+  padding: 22px;
+  margin-top: 1.5rem;
+}
+
+#skills .s_title {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#skills .all_skills{
+  display: flex;
+}
