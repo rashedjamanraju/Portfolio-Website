@@ -376,25 +376,31 @@ html {
 }
 
 
-#achievements {
+#achievements,
+#problem_solving,
+#skills {
   padding: 22px;
   margin-top: 1.5rem;
 }
 
-#achievements .a_title {
+#achievements .a_title,
+#problem_solving .ps_title,
+#skills .s_title {
   font-size: 40px;
   font-weight: 400;
   line-height: normal;
 }
 
-#achievements .a_gallary {
+#achievements .a_gallary,
+#problem_solving .ps_gallary {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 50px;
 }
 
-#achievements .a_gallary .a_box {
+#achievements .a_gallary .a_box,
+#problem_solving .ps_gallary .ps_box {
   max-width: 456px;
   min-height: 494px;
   background-color: #fff;
@@ -410,12 +416,14 @@ html {
   margin-bottom: 16px;
 }
 
-#achievements .a_gallary .a_box .image {
+#achievements .a_gallary .a_box .image,
+#problem_solving .ps_gallary .ps_box .image {
   display: flex;
   justify-content: center;
 }
 
-#achievements .a_gallary .a_box .title {
+#achievements .a_gallary .a_box .title,
+#problem_solving .ps_gallary .ps_box .title {
   margin-top: 20px;
   text-align: center;
   color: #000;
@@ -424,7 +432,8 @@ html {
   line-height: 24px;
 }
 
-#achievements .a_gallary .a_box .description {
+#achievements .a_gallary .a_box .description,
+#problem_solving .ps_gallary .ps_box .description {
   text-align: center;
   font-size: 14px;
   margin-top: 0;
@@ -434,12 +443,14 @@ html {
 
 }
 
-#achievements .a_gallary .a_box .btns {
+#achievements .a_gallary .a_box .btns,
+#problem_solving .ps_gallary .ps_box .btns {
   display: flex;
   justify-content: center;
 }
 
-#achievements .a_gallary .a_box .btns button {
+#achievements .a_gallary .a_box .btns button,
+#problem_solving .ps_gallary .ps_box .btns button {
   align-items: center;
   background: #0645ad;
   border-radius: 4px;
@@ -456,18 +467,13 @@ html {
   white-space: nowrap;
 }
 
-
-#skills {
-  padding: 22px;
-  margin-top: 1.5rem;
-}
-
-#skills .s_title {
-  font-size: 40px;
-  font-weight: 400;
-  line-height: normal;
-}
-
-#skills .all_skills{
+#skills .all_skills {
   display: flex;
+}
+
+#problem_solving .small_description {
+  color: #868e96 !important;
+  color: #868e96 !important;
+  margin-block-end: 50px;
+  margin-block-start: 15px;
 }
