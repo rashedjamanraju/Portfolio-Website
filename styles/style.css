@@ -408,6 +408,7 @@ html {
   margin-top: 50px;
   align-items: center;
   gap: 20px;
+  
 }
 
 #achievements .a_gallary .a_box,
@@ -532,4 +533,43 @@ html {
   color: #868e96 !important;
   margin-block-end: 50px;
   margin-block-start: 15px;
+}
+
+@media (max-width:1443px){
+  #navigation_container .nav_buttons_container ul{
+    /* display: none; */
+  }
+}
+
+@media (max-width:1449px){
+
+  #hero_area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  #hero_area .text_section{
+    text-align: center;
+    order: 2;
+  }
+  #hero_area .text_section button{
+    margin: 0 auto;
+  }
+
+  #hero_area .hero_image_section{
+    order: 1;
+  }
+  #hero_area .social_media_section ul{
+    align-items: center;
+    justify-content: center;
+  }
+  #skills .all_skills{
+    flex-direction: column;
+  }
+
+}
+@media (min-width:1450){
+
 }
