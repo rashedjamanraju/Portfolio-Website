@@ -378,21 +378,24 @@ html {
 
 #achievements,
 #problem_solving,
-#skills {
+#skills,
+#projects {
   padding: 22px;
   margin-top: 1.5rem;
 }
 
 #achievements .a_title,
 #problem_solving .ps_title,
-#skills .s_title {
+#skills .s_title,
+#projects .ps_title {
   font-size: 40px;
   font-weight: 400;
   line-height: normal;
 }
 
 #achievements .a_gallary,
-#problem_solving .ps_gallary {
+#problem_solving .ps_gallary,
+#projects .ps_gallary {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -400,7 +403,8 @@ html {
 }
 
 #achievements .a_gallary .a_box,
-#problem_solving .ps_gallary .ps_box {
+#problem_solving .ps_gallary .ps_box,
+#projects .ps_gallary .ps_box {
   max-width: 456px;
   min-height: 494px;
   background-color: #fff;
@@ -417,14 +421,17 @@ html {
 }
 
 #achievements .a_gallary .a_box .image,
-#problem_solving .ps_gallary .ps_box .image {
+#problem_solving .ps_gallary .ps_box .image,
+#projects .ps_gallary .ps_box .image {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #achievements .a_gallary .a_box .title,
-#problem_solving .ps_gallary .ps_box .title {
-  margin-top: 20px;
+#problem_solving .ps_gallary .ps_box .title,
+#projects .ps_gallary .ps_box .title {
+  /* margin-top: 20px; */
   text-align: center;
   color: #000;
   font-size: 22px;
@@ -433,7 +440,8 @@ html {
 }
 
 #achievements .a_gallary .a_box .description,
-#problem_solving .ps_gallary .ps_box .description {
+#problem_solving .ps_gallary .ps_box .description,
+#projects .ps_gallary .ps_box .description {
   text-align: center;
   font-size: 14px;
   margin-top: 0;
@@ -444,13 +452,15 @@ html {
 }
 
 #achievements .a_gallary .a_box .btns,
-#problem_solving .ps_gallary .ps_box .btns {
+#problem_solving .ps_gallary .ps_box .btns,
+#projects .ps_gallary .ps_box .btns {
   display: flex;
   justify-content: center;
 }
 
 #achievements .a_gallary .a_box .btns button,
-#problem_solving .ps_gallary .ps_box .btns button {
+#problem_solving .ps_gallary .ps_box .btns button,
+#projects .ps_gallary .ps_box .btns button {
   align-items: center;
   background: #0645ad;
   border-radius: 4px;
@@ -467,13 +477,52 @@ html {
   white-space: nowrap;
 }
 
+
 #skills .all_skills {
   display: flex;
+  margin-top: 25px;
 }
 
-#problem_solving .small_description {
+.com_skills_box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.com_skills_title {
+  font-weight: 500;
+  color: blue;
+  margin-bottom: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.com_skills_title i {
+  color: blue;
+}
+
+.com_all_sub_skills span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 8px 4px 0px;
+  padding: 8px 16px;
+  background-color: rgb(247, 250, 252);
+  border: 1px solid rgb(226, 232, 240);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(45, 55, 72);
+}
+
+
+#problem_solving .small_description,
+#projects .small_description {
   color: #868e96 !important;
   color: #868e96 !important;
   margin-block-end: 50px;
   margin-block-start: 15px;
 }
+
