@@ -16,6 +16,7 @@ html {
 #main_container {
   max-width: 1440px;
   margin: 0 auto;
+  width: 75%;
 }
 
 #navigation_container {
@@ -396,10 +397,17 @@ html {
 #achievements .a_gallary,
 #problem_solving .ps_gallary,
 #projects .ps_gallary {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 50px; */
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 50px;
+  align-items: center;
+  gap: 20px;
 }
 
 #achievements .a_gallary .a_box,
@@ -525,4 +533,3 @@ html {
   margin-block-end: 50px;
   margin-block-start: 15px;
 }
-
