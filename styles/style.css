@@ -599,6 +599,36 @@ html {
   font-size: 19px;
 }
 
+/* HR base style */
+.edu_gallary hr.animated {
+    border: none;
+    height: 3px;
+    width: 0%;
+    background: #ccc;
+    transition: width 1s ease, background-color 1s ease;
+    margin: 15px 0;
+}
+
+/* Expand animation */
+.edu_gallary hr.animated.active {
+    width: 100%;
+}
+
+/* Assign custom hover colors for each box */
+.edu_box:nth-of-type(1):hover ~ hr.animated:nth-of-type(1),
+.edu_box:nth-of-type(1):hover + hr.animated {
+    background: rgb(98, 9, 207); /* Blue for first box */
+    width: 100%;
+}
+
+.edu_box:nth-of-type(2):hover ~ hr.animated:nth-of-type(2),
+.edu_box:nth-of-type(2):hover + hr.animated {
+    background: rgb(98, 9, 207); /* Red for second box */
+    width: 100%;
+}
+
+
+
 @media (max-width:768px) {
 
   #hero_area {
