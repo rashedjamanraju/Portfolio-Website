@@ -549,7 +549,7 @@ html {
 #education .edu_gallary {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  /* gap: 20px; */
   width: 100%;
 }
 
@@ -617,13 +617,13 @@ html {
 /* Assign custom hover colors for each box */
 .edu_box:nth-of-type(1):hover ~ hr.animated:nth-of-type(1),
 .edu_box:nth-of-type(1):hover + hr.animated {
-    background: rgb(98, 9, 207); /* Blue for first box */
+    background: rgb(162, 94, 245); /* Blue for first box */
     width: 100%;
 }
 
 .edu_box:nth-of-type(2):hover ~ hr.animated:nth-of-type(2),
 .edu_box:nth-of-type(2):hover + hr.animated {
-    background: rgb(98, 9, 207); /* Red for second box */
+    background: rgb(162, 94, 245); /* Red for second box */
     width: 100%;
 }
 
@@ -711,4 +711,7 @@ html {
     flex-direction: column;
   }
 
+}
+.special_btn{
+  position: relative;
 }
