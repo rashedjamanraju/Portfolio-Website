@@ -534,6 +534,70 @@ html {
   margin-block-start: 15px;
 }
 
+/* education section */
+#education {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+}
+
+#education .edu_title {
+  font-size: 56px;
+  font-weight: 400;
+}
+
+#education .edu_gallary {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+#education .edu_image {
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#education img {
+  width: 100%;
+  height: auto;
+}
+
+#education .edu_box {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 16px;
+}
+
+#education .edu_details {
+  display: flex;
+  flex-direction: column;
+  /* flex: 1; */
+  gap: 5px;
+}
+
+#education .institution {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+#education .degree_name {
+  color: #000;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#education .duration,
+#education .location {
+  color: #000;
+  font-size: 19px;
+}
 
 @media (max-width:768px) {
 
