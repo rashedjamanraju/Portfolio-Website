@@ -601,32 +601,88 @@ html {
 
 /* HR base style */
 .edu_gallary hr.animated {
-    border: none;
-    height: 3px;
-    width: 0%;
-    background: #ccc;
-    transition: width 1s ease, background-color 1s ease;
-    margin: 15px 0;
+  border: none;
+  height: 3px;
+  width: 0%;
+  background: #ccc;
+  transition: width 1s ease, background-color 1s ease;
+  margin: 15px 0;
 }
 
 /* Expand animation */
 .edu_gallary hr.animated.active {
-    width: 100%;
+  width: 100%;
 }
 
 /* Assign custom hover colors for each box */
-.edu_box:nth-of-type(1):hover ~ hr.animated:nth-of-type(1),
-.edu_box:nth-of-type(1):hover + hr.animated {
-    background: rgb(162, 94, 245); /* Blue for first box */
-    width: 100%;
+.edu_box:nth-of-type(1):hover~hr.animated:nth-of-type(1),
+.edu_box:nth-of-type(1):hover+hr.animated {
+  background: rgb(162, 94, 245);
+  /* Blue for first box */
+  width: 100%;
 }
 
-.edu_box:nth-of-type(2):hover ~ hr.animated:nth-of-type(2),
-.edu_box:nth-of-type(2):hover + hr.animated {
-    background: rgb(162, 94, 245); /* Red for second box */
-    width: 100%;
+.edu_box:nth-of-type(2):hover~hr.animated:nth-of-type(2),
+.edu_box:nth-of-type(2):hover+hr.animated {
+  background: rgb(162, 94, 245);
+  /* Red for second box */
+  width: 100%;
 }
 
+#contact {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact .c_upper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#contact .c_links .c_title {
+  font-size: 65px;
+  font-weight: 400;
+}
+
+#contact .c_links .c_description {
+  color: #868e96 !important;
+}
+
+#contact .c_links>a {
+  color: #868e96;
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+
+
+#contact .c_lower {
+  text-align: center;
+  color: #868e96 !important;
+  text-align: center;
+}
+.btn_grid_container{
+  display: inline-grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+#contact .btn_grid_container a.c_btn {
+  align-items: center;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  padding: 12px 16px;
+  text-decoration: none;
+  transition: all .3s ease;
+  gap: 6px;
+  background-color: #666;
+  justify-content: center;
+}
 
 
 @media (max-width:768px) {
@@ -712,6 +768,7 @@ html {
   }
 
 }
-.special_btn{
+
+.special_btn {
   position: relative;
 }
