@@ -1065,96 +1065,84 @@
     </footer>
     <script>
         (function () {
-            const navContainer = document.getElementById('navigation_container');
+            const outer = document.getElementById('initial_nav_container'); // full-width fixed element
+            const innerNav = document.getElementById('navigation_container'); // centered content
             const toggle = document.getElementById('navToggle');
-            const navCard = document.querySelector('#navigation_container .nav_buttons_container');
-            const navLinks = document.querySelectorAll('#navigation_container .nav_buttons_container a[href^="#"], #navigation_container .nav_buttons_container a[href]');
+            const navButtons = document.querySelector('#initial_nav_container .nav_buttons_container');
+            const navLinks = document.querySelectorAll('#initial_nav_container .nav_buttons_container a[href^="#"], #initial_nav_container .nav_buttons_container a[href]');
 
-            if (!navContainer || !toggle || !navCard) return;
+            if (!outer || !innerNav || !toggle || !navButtons) return;
 
-            function lockScroll() {
-                document.documentElement.style.overflow = 'hidden';
-                document.body.style.overflow = 'hidden';
-            }
-            function unlockScroll() {
-                document.documentElement.style.overflow = '';
-                document.body.style.overflow = '';
-            }
-
+            // Toggle menu open/close
             function openNav() {
-                navContainer.classList.add('nav-open');
+                outer.classList.add('nav-open');
                 toggle.setAttribute('aria-expanded', 'true');
-                lockScroll();
+                // simple scroll lock: add class to body rather than setting overflow on html/body directly
+                document.documentElement.classList.add('nav-locked');
             }
-
             function closeNav() {
-                navContainer.classList.remove('nav-open');
+                outer.classList.remove('nav-open');
                 toggle.setAttribute('aria-expanded', 'false');
-                unlockScroll();
+                document.documentElement.classList.remove('nav-locked');
             }
 
             toggle.addEventListener('click', function (e) {
                 e.stopPropagation();
-                if (navContainer.classList.contains('nav-open')) closeNav();
+                if (outer.classList.contains('nav-open')) closeNav();
                 else openNav();
             });
 
-            // Close nav when a link is clicked. For internal anchors do smooth scroll & focus.
+            // Close nav on outside click (mobile)
+            document.addEventListener('click', function (e) {
+                if (window.innerWidth > 1017) return;
+                if (!outer.classList.contains('nav-open')) return;
+                if (!outer.contains(e.target)) closeNav();
+            });
+
+            // Close on Escape
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeNav();
+            });
+
+            // Handle nav links — smooth scroll for anchors and close menu
             navLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
                     const href = link.getAttribute('href') || '';
-                    // If it's an internal anchor (starts with #) handle smooth scroll
                     if (href.startsWith('#') && href.length > 1) {
                         e.preventDefault();
                         const target = document.querySelector(href);
+                        closeNav();
+
+                        // Use dynamic header height to offset scroll
+                        const header = outer;
+                        const headerHeight = header ? header.getBoundingClientRect().height : 0;
+                        const offset = Math.ceil(headerHeight) + 8;
+
                         if (target) {
-                            // Close menu first so user can see page normally
-                            closeNav();
-                            // wait a tick for menu to close, then smooth-scroll and focus
-                            setTimeout(() => {
-                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                // ensure focus for keyboard users
-                                target.setAttribute('tabindex', '-1');
-                                target.focus({ preventScroll: true });
-                                // remove tabindex after a while to keep DOM clean
-                                setTimeout(() => { target.removeAttribute('tabindex'); }, 1200);
-                            }, 160); // matches the CSS transition roughly
-                        } else {
-                            // no target found — still close nav
-                            closeNav();
+                            const targetY = window.scrollY + target.getBoundingClientRect().top - offset;
+                            window.scrollTo({ top: targetY, behavior: 'smooth' });
+
+                            // accessibility: focus the target
+                            target.setAttribute('tabindex', '-1');
+                            target.focus({ preventScroll: true });
+                            setTimeout(() => target.removeAttribute('tabindex'), 1200);
+                            // update URL:
+                            history.replaceState(null, '', href);
                         }
                     } else {
-                        // external link or plain anchor: close nav so page becomes scrollable
-                        // let normal navigation proceed
+                        // external link: just close nav and allow default
                         closeNav();
                     }
                 });
             });
 
-            // close on outside click (mobile only)
-            document.addEventListener('click', function (e) {
-                if (window.innerWidth > 880) return;
-                if (!navContainer.classList.contains('nav-open')) return;
-                if (!navContainer.contains(e.target)) closeNav();
-            });
+            // Prevent page jump while nav locked (optional scrolled background prevention)
+            // Add this CSS rule to your stylesheet:
+            // html.nav-locked, body.nav-locked { height: 100%; overflow: hidden; }
 
-            // close on escape
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') closeNav();
-            });
-
-            // Optional: make sure resize restores scroll if user resizes device
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 880) {
-                    // ensure nav is visible normally and scrolling enabled
-                    navContainer.classList.remove('nav-open');
-                    unlockScroll();
-                    toggle.setAttribute('aria-expanded', 'false');
-                }
-            });
         })();
     </script>
-    
+
 
 
 </body>
