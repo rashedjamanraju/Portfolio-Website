@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Rashed Jaman Raju — Aspiring Software Engineer. Competitive programmer, Full-stack & AI projects. Available for internships and roles.">
+    <meta property="og:title" content="Rashed Jaman Raju — Portfolio" />
+    <meta property="og:description"
+        content="Aspiring Software Engineer. Competitive programmer. Projects in AI, RAG, and full-stack." />
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <title>Rashed Jaman Raju - Portfolio</title>
 
     <!--Custom CSS-->
@@ -11,19 +19,23 @@
 
     <!--Font Awsome css-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.4/css/all.min.css" />
+
 </head>
 
 <body>
+
     <!--Main container section this will be centered aligned-->
-    <div id="main_container">
-        <!--Navigation -->
+    <div id="initial_nav_container">
         <div id="navigation_container">
             <a href="">
                 <div class="user_name_logo_container">
                     <img src="./images/logo/sacrifice-demo.png" alt="" />
                 </div>
             </a>
-
+            <button id="navToggle" class="nav-toggle" aria-controls="siteNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
             <nav class="nav_buttons_container">
                 <ul>
                     <li>
@@ -75,6 +87,8 @@
                 </ul>
             </nav>
         </div>
+    </div>
+    <div id="main_container">
         <!-- hero area section -->
         <div id="hero_area">
             <div class="text_section">
@@ -987,175 +1001,162 @@
             </div>
         </div>
 
-        <!-- Contact me section -->
-        <div id="contact">
-            <div class="c_upper">
-                <div class="c_links">
-                    <p class="c_title">Contact Me</p>
-                    <p class="c_description">
-                        If you want to hire me or have other queries, then knock me
-                        anytime. I try to reply within 24 hours.
-                    </p>
-                    <a href="mailto:c251100@ugrad.iiuc.ac.bd">c251100@ugrad.iiuc.ac.bd</a>
 
-                    <!-- 12 buttons container -->
-                    <div class="btn_grid_container">
 
-                        <a target="_blank" class="c_btn" rel="noopener noreferrer" title="Academy">
-                            <i class="fas fa-code"></i>
-                            <span class="social-label">Academy</span>
-                        </a>
 
-                        <a target="_blank" class="c_btn"  rel="noopener noreferrer" title="Personal Blog">
-                            <i class="fas fa-blog"></i>
-                            <span class="social-label">Blog</span>
-                        </a>
 
-                        <a target="_blank" class="c_btn"  rel="noopener noreferrer" title="GitHub">
-                            <i class="fab fa-github"></i>
-                            <span class="social-label">GitHub</span>
-                        </a>
+    </div>
 
-                        <a target="_blank" class="c_btn"  rel="noopener noreferrer" title="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                            <span class="social-label">LinkedIn</span>
-                        </a>
 
-                        <a target="_blank" class="c_btn"  rel="noopener noreferrer" title="Gmail">
-                            <i class="fas fa-envelope"></i>
-                            <span class="social-label">Gmail</span>
-                        </a>
+    <footer class="site-footer" id="siteFooter" aria-labelledby="footerHeading">
+        <div class="footer-inner">
+            <div class="footer-about">
+                <h3 id="footerHeading">Rashed Jaman Raju</h3>
+                <p class="muted">Aspiring Software Engineer • Competitive Programmer • AI & Full-stack</p>
+                <p class="contact-line">
+                    <a href="mailto:c251100@ugrad.iiuc.ac.bd" class="link">c251100@ugrad.iiuc.ac.bd</a>
+                    <span class="sep">•</span>
+                    <span class="muted">Chittagong, Bangladesh</span>
+                </p>
 
-                        <a target="_blank" class="c_btn"  rel="noopener noreferrer" title="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                            <span class="social-label">Facebook</span>
-                        </a>
-
-                        <a target="_blank" class="c_btn"  rel="noopener noreferrer" title="Facebook Page">
-                            <i class="fa-brands fa-facebook"></i>
-                            <span class="social-label">FB Page</span>
-                        </a>
-
-                        <a target="_blank" class="c_btn"  rel="noopener noreferrer" title="Twitter">
-                            <i class="fab fa-twitter"></i>
-                            <span class="social-label">Twitter</span>
-                        </a>
-
-                        <a target="_blank" class="c_btn"  rel="noopener noreferrer" title="Discord">
-                            <i class="fab fa-discord"></i>
-                            <span class="social-label">Discord</span>
-                        </a>
-
-                        <a target="_blank" class="c_btn"  rel="noopener noreferrer" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                            <span class="social-label">Instagram</span>
-                        </a>
-
-                        <a target="_blank" class="c_btn"  rel="noopener noreferrer" title="Spotify">
-                            <i class="fab fa-spotify"></i>
-                            <span class="social-label">Spotify</span>
-                        </a>
-
-                        <a target="_blank" class="c_btn"  rel="noopener noreferrer" title="Linktree">
-                            <i class="fas fa-external-link-square-alt"></i>
-                            <span class="social-label">Linktree</span>
-                        </a>
-
-                    </div>
-                </div>
-                <div class="c_gif">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" style="
-                width: 100%;
-                height: 100%;
-                transform: translate3d(0px, 0px, 0px);
-                content-visibility: visible;
-              ">
-                        <defs>
-                            <clipPath id="__lottie_element_2">
-                                <rect width="1920" height="1080" x="0" y="0"></rect>
-                            </clipPath>
-                        </defs>
-                        <g clip-path="url(#__lottie_element_2)">
-                            <g transform="matrix(0.8356706500053406,0,0,0.8356706500053406,831.47412109375,847.2153930664062)"
-                                opacity="1" style="display: block">
-                                <g opacity="1" transform="matrix(1,0,0,1,153.68600463867188,22.08099937438965)">
-                                    <path fill="rgb(226,210,255)" fill-opacity="1"
-                                        d=" M153.43600463867188,-0.0010000000474974513 C153.43600463867188,12.055999755859375 84.74099731445312,21.83099937438965 -0.0010000000474974513,21.83099937438965 C-84.74099731445312,21.83099937438965 -153.43600463867188,12.055999755859375 -153.43600463867188,-0.0010000000474974513 C-153.43600463867188,-12.057999610900879 -84.74099731445312,-21.83099937438965 -0.0010000000474974513,-21.83099937438965 C84.74099731445312,-21.83099937438965 153.43600463867188,-12.057999610900879 153.43600463867188,-0.0010000000474974513z">
-                                    </path>
-                                </g>
-                            </g>
-                            <g transform="matrix(1,0,0,1,1182.1549072265625,282.890625)" opacity="1"
-                                style="display: block">
-                                <g opacity="1" transform="matrix(1,0,0,1,67.09700012207031,67.09700012207031)">
-                                    <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0"
-                                        stroke-miterlimit="10" stroke="rgb(226,210,255)" stroke-opacity="1"
-                                        stroke-width="17.102"
-                                        d=" M24.343000411987305,0 C24.343000411987305,13.444000244140625 13.444000244140625,24.341999053955078 0,24.341999053955078 C-13.444000244140625,24.341999053955078 -24.343000411987305,13.444000244140625 -24.343000411987305,0 C-24.343000411987305,-13.444000244140625 -13.444000244140625,-24.341999053955078 0,-24.341999053955078 C13.444000244140625,-24.341999053955078 24.343000411987305,-13.444000244140625 24.343000411987305,0z">
-                                    </path>
-                                </g>
-                            </g>
-                            <g transform="matrix(1,0,0,1,1249.0040283203125,598.5245971679688)" opacity="1"
-                                style="display: block">
-                                <g opacity="1" transform="matrix(1,0,0,1,8.723999977111816,33.15999984741211)">
-                                    <path fill="rgb(226,210,255)" fill-opacity="1"
-                                        d=" M-8.473999977111816,-32.90999984741211 C-8.473999977111816,-32.90999984741211 8.473999977111816,-32.90999984741211 8.473999977111816,-32.90999984741211 C8.473999977111816,-32.90999984741211 8.473999977111816,32.90999984741211 8.473999977111816,32.90999984741211 C8.473999977111816,32.90999984741211 -8.473999977111816,32.90999984741211 -8.473999977111816,32.90999984741211 C-8.473999977111816,32.90999984741211 -8.473999977111816,-32.90999984741211 -8.473999977111816,-32.90999984741211z">
-                                    </path>
-                                </g>
-                            </g>
-                            <g transform="matrix(1,0,0,1,1224.5679931640625,622.9866333007812)" opacity="1"
-                                style="display: block">
-                                <g opacity="1" transform="matrix(1,0,0,1,33.15999984741211,8.725000381469727)">
-                                    <path fill="rgb(226,210,255)" fill-opacity="1"
-                                        d=" M32.90999984741211,8.475000381469727 C32.90999984741211,8.475000381469727 -32.90999984741211,8.475000381469727 -32.90999984741211,8.475000381469727 C-32.90999984741211,8.475000381469727 -32.90999984741211,-8.475000381469727 -32.90999984741211,-8.475000381469727 C-32.90999984741211,-8.475000381469727 32.90999984741211,-8.475000381469727 32.90999984741211,-8.475000381469727 C32.90999984741211,-8.475000381469727 32.90999984741211,8.475000381469727 32.90999984741211,8.475000381469727z">
-                                    </path>
-                                </g>
-                            </g>
-                            <g transform="matrix(1,0,0,1,608.9150390625,682.08154296875)" opacity="1"
-                                style="display: block">
-                                <g opacity="1" transform="matrix(1,0,0,1,57.805999755859375,57.805999755859375)">
-                                    <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0"
-                                        stroke-miterlimit="10" stroke="rgb(226,210,255)" stroke-opacity="1"
-                                        stroke-width="17.102"
-                                        d=" M15.050999641418457,0 C15.050999641418457,8.312999725341797 8.312999725341797,15.050999641418457 0,15.050999641418457 C-8.312000274658203,15.050999641418457 -15.050999641418457,8.312999725341797 -15.050999641418457,0 C-15.050999641418457,-8.312999725341797 -8.312000274658203,-15.050999641418457 0,-15.050999641418457 C8.312999725341797,-15.050999641418457 15.050999641418457,-8.312999725341797 15.050999641418457,0z">
-                                    </path>
-                                </g>
-                            </g>
-                            <g transform="matrix(1,0,0,1,699.35302734375,192.3223419189453)" opacity="1"
-                                style="display: block">
-                                <g opacity="1" transform="matrix(1,0,0,1,76.3499984741211,61.29600143432617)">
-                                    <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0"
-                                        stroke-miterlimit="10" stroke="rgb(226,210,255)" stroke-opacity="1"
-                                        stroke-width="17.102"
-                                        d=" M-33.595001220703125,0 C-33.595001220703125,0 -17.27400016784668,-18.541000366210938 1.2669999599456787,0 C19.808000564575195,18.541000366210938 33.595001220703125,0 33.595001220703125,0">
-                                    </path>
-                                </g>
-                            </g>
-                            <g transform="matrix(1,0,0,1,928.2780151367188,469.40716552734375)" opacity="1"
-                                style="display: block">
-                                <g opacity="1" transform="matrix(1,0,0,1,115.30000305175781,100.94200134277344)">
-                                    <path fill="rgb(226,210,255)" fill-opacity="1"
-                                        d=" M115.05000305175781,-100.69200134277344 C115.05000305175781,-100.69200134277344 115.05000305175781,77.01499938964844 115.05000305175781,77.01499938964844 C115.05000305175781,77.01499938964844 91.37100219726562,100.69200134277344 91.37100219726562,100.69200134277344 C91.37100219726562,100.69200134277344 -115.05000305175781,100.69200134277344 -115.05000305175781,100.69200134277344 C-115.05000305175781,100.69200134277344 108.86900329589844,85.29100036621094 115.05000305175781,-100.69200134277344z">
-                                    </path>
-                                </g>
-                            </g>
-                            <g transform="matrix(1,0,0,1,749.1380004882812,361.52117919921875)" opacity="1"
-                                style="display: block">
-                                <g opacity="1" transform="matrix(1,0,0,1,210.76699829101562,158.13800048828125)">
-                                    <path fill="rgb(102,0,255)" fill-opacity="1"
-                                        d=" M171.0449981689453,-157.88800048828125 C171.0449981689453,-157.88800048828125 -171.04400634765625,-157.88800048828125 -171.04400634765625,-157.88800048828125 C-192.81100463867188,-157.88800048828125 -210.51699829101562,-140.1820068359375 -210.51699829101562,-118.41600036621094 C-210.51699829101562,-118.41600036621094 -210.51699829101562,118.41600036621094 -210.51699829101562,118.41600036621094 C-210.51699829101562,140.1820068359375 -192.81100463867188,157.88800048828125 -171.04400634765625,157.88800048828125 C-171.04400634765625,157.88800048828125 171.0449981689453,157.88800048828125 171.0449981689453,157.88800048828125 C192.81199645996094,157.88800048828125 210.51699829101562,140.1820068359375 210.51699829101562,118.41600036621094 C210.51699829101562,118.41600036621094 210.51699829101562,-118.41600036621094 210.51699829101562,-118.41600036621094 C210.51699829101562,-140.1820068359375 192.81199645996094,-157.88800048828125 171.0449981689453,-157.88800048828125z M171.0449981689453,-131.572998046875 C172.83299255371094,-131.572998046875 174.5330047607422,-131.20199584960938 176.08799743652344,-130.55499267578125 C176.08799743652344,-130.55499267578125 0,22.06100082397461 0,22.06100082397461 C0,22.06100082397461 -176.08799743652344,-130.55499267578125 -176.08799743652344,-130.55499267578125 C-174.53399658203125,-131.2010040283203 -172.83299255371094,-131.572998046875 -171.0449981689453,-131.572998046875 C-171.0449981689453,-131.572998046875 171.0449981689453,-131.572998046875 171.0449981689453,-131.572998046875z M171.0449981689453,131.572998046875 C171.0449981689453,131.572998046875 -171.04400634765625,131.572998046875 -171.04400634765625,131.572998046875 C-178.3040008544922,131.572998046875 -184.20199584960938,125.6760025024414 -184.20199584960938,118.41500091552734 C-184.20199584960938,118.41500091552734 -184.20199584960938,-102.75299835205078 -184.20199584960938,-102.75299835205078 C-184.20199584960938,-102.75299835205078 -8.621999740600586,49.41699981689453 -8.621999740600586,49.41699981689453 C-6.142000198364258,51.5620002746582 -3.071000099182129,52.62900161743164 0,52.62900161743164 C3.071000099182129,52.62900161743164 6.142000198364258,51.5629997253418 8.621999740600586,49.41699981689453 C8.621999740600586,49.41699981689453 184.2030029296875,-102.75299835205078 184.2030029296875,-102.75299835205078 C184.2030029296875,-102.75299835205078 184.2030029296875,118.41600036621094 184.2030029296875,118.41600036621094 C184.20199584960938,125.6760025024414 178.30499267578125,131.572998046875 171.0449981689453,131.572998046875z">
-                                    </path>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
+                <div class="socials" aria-label="social links">
+                    <a href="https://github.com/rashedjamanraju" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Discord" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-discord"></i></a>
                 </div>
             </div>
-            <div class="c_lower">Arigato gozaimasu for visting my portfolio.
 
+            <nav class="footer-links" aria-label="Quick links">
+                <h4 class="visually-hidden">Quick links</h4>
+                <ul>
+                    <li><a href="#work_experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-newsletter" aria-hidden="false">
+                <h4>Stay in touch</h4>
+                <p class="muted small">Subscribe for updates (demo)</p>
+
+                <form id="footerSubscribeForm" class="subscribe-form" novalidate>
+                    <label for="footerEmail" class="visually-hidden">Email</label>
+                    <input id="footerEmail" type="email" placeholder="your@email.com" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+
+                <p class="built-with small">Built with HTML • CSS • JavaScript • Vercel</p>
             </div>
         </div>
-    </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Rashed Jaman Raju — All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        (function () {
+            const navContainer = document.getElementById('navigation_container');
+            const toggle = document.getElementById('navToggle');
+            const navCard = document.querySelector('#navigation_container .nav_buttons_container');
+            const navLinks = document.querySelectorAll('#navigation_container .nav_buttons_container a[href^="#"], #navigation_container .nav_buttons_container a[href]');
+
+            if (!navContainer || !toggle || !navCard) return;
+
+            function lockScroll() {
+                document.documentElement.style.overflow = 'hidden';
+                document.body.style.overflow = 'hidden';
+            }
+            function unlockScroll() {
+                document.documentElement.style.overflow = '';
+                document.body.style.overflow = '';
+            }
+
+            function openNav() {
+                navContainer.classList.add('nav-open');
+                toggle.setAttribute('aria-expanded', 'true');
+                lockScroll();
+            }
+
+            function closeNav() {
+                navContainer.classList.remove('nav-open');
+                toggle.setAttribute('aria-expanded', 'false');
+                unlockScroll();
+            }
+
+            toggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (navContainer.classList.contains('nav-open')) closeNav();
+                else openNav();
+            });
+
+            // Close nav when a link is clicked. For internal anchors do smooth scroll & focus.
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const href = link.getAttribute('href') || '';
+                    // If it's an internal anchor (starts with #) handle smooth scroll
+                    if (href.startsWith('#') && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            // Close menu first so user can see page normally
+                            closeNav();
+                            // wait a tick for menu to close, then smooth-scroll and focus
+                            setTimeout(() => {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                // ensure focus for keyboard users
+                                target.setAttribute('tabindex', '-1');
+                                target.focus({ preventScroll: true });
+                                // remove tabindex after a while to keep DOM clean
+                                setTimeout(() => { target.removeAttribute('tabindex'); }, 1200);
+                            }, 160); // matches the CSS transition roughly
+                        } else {
+                            // no target found — still close nav
+                            closeNav();
+                        }
+                    } else {
+                        // external link or plain anchor: close nav so page becomes scrollable
+                        // let normal navigation proceed
+                        closeNav();
+                    }
+                });
+            });
+
+            // close on outside click (mobile only)
+            document.addEventListener('click', function (e) {
+                if (window.innerWidth > 880) return;
+                if (!navContainer.classList.contains('nav-open')) return;
+                if (!navContainer.contains(e.target)) closeNav();
+            });
+
+            // close on escape
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeNav();
+            });
+
+            // Optional: make sure resize restores scroll if user resizes device
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 880) {
+                    // ensure nav is visible normally and scrolling enabled
+                    navContainer.classList.remove('nav-open');
+                    unlockScroll();
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
+    
+
+
 </body>
 
 </html>
