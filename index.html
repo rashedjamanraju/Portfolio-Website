@@ -24,7 +24,7 @@
 
 <body>
 
-    <!--Main container section this will be centered aligned-->
+   
     <div id="initial_nav_container">
         <div id="navigation_container">
             <a href="">
@@ -32,10 +32,7 @@
                     <img src="./images/logo/sacrifice-demo.png" alt="" />
                 </div>
             </a>
-            <button id="navToggle" class="nav-toggle" aria-controls="siteNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="hamburger" aria-hidden="true"></span>
-            </button>
+            
             <nav class="nav_buttons_container">
                 <ul>
                     <li>
@@ -88,6 +85,8 @@
             </nav>
         </div>
     </div>
+
+     <!--Main container section this will be centered aligned-->
     <div id="main_container">
         <!-- hero area section -->
         <div id="hero_area">
@@ -152,7 +151,7 @@
 
         <!-- work experience section -->
         <div id="work_experience">
-            <p class="we_title">Work Experience</p>
+            <p class="we_title">💼 Work Experience</p>
             <div class="exp_details">
                 <div class="current_pos">
                     <div class="company_logo_part">
@@ -373,7 +372,7 @@
 
         <!-- Skills section -->
         <div id="skills">
-            <p class="s_title">Skills</p>
+            <p class="s_title">Skills 🛠️</p>
             <div class="all_skills">
                 <div class="left_col">
                     <div class="com_skills_box">
@@ -683,7 +682,7 @@
 
         <!-- Problem Solving Activities section-->
         <div id="problem_solving">
-            <p class="ps_title">Problem Solving Activities</p>
+            <p class="ps_title">Problem Solving Activities 🧩</p>
             <p class="small_description">My Competitive Programming Journey</p>
             <div class="ps_gallary">
                 <div class="ps_box">
@@ -793,7 +792,7 @@
 
         <!-- Project section -->
         <div id="projects">
-            <p class="ps_title">Projects</p>
+            <p class="ps_title">Projects 🗂️</p>
             <p class="small_description">
                 A collection of my GitHub repositories and personal projects,
                 including both open source contributions and private projects with
@@ -966,7 +965,7 @@
 
         <!-- Education section -->
         <div id="education">
-            <p class="edu_title">Education</p>
+            <p class="edu_title">🎓 Education</p>
             <div class="edu_gallary">
                 <div class="edu_box">
                     <div class="edu_image">
@@ -1063,86 +1062,7 @@
             <p>© <span id="year"></span> Rashed Jaman Raju — All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        (function () {
-            const outer = document.getElementById('initial_nav_container'); // full-width fixed element
-            const innerNav = document.getElementById('navigation_container'); // centered content
-            const toggle = document.getElementById('navToggle');
-            const navButtons = document.querySelector('#initial_nav_container .nav_buttons_container');
-            const navLinks = document.querySelectorAll('#initial_nav_container .nav_buttons_container a[href^="#"], #initial_nav_container .nav_buttons_container a[href]');
-
-            if (!outer || !innerNav || !toggle || !navButtons) return;
-
-            // Toggle menu open/close
-            function openNav() {
-                outer.classList.add('nav-open');
-                toggle.setAttribute('aria-expanded', 'true');
-                // simple scroll lock: add class to body rather than setting overflow on html/body directly
-                document.documentElement.classList.add('nav-locked');
-            }
-            function closeNav() {
-                outer.classList.remove('nav-open');
-                toggle.setAttribute('aria-expanded', 'false');
-                document.documentElement.classList.remove('nav-locked');
-            }
-
-            toggle.addEventListener('click', function (e) {
-                e.stopPropagation();
-                if (outer.classList.contains('nav-open')) closeNav();
-                else openNav();
-            });
-
-            // Close nav on outside click (mobile)
-            document.addEventListener('click', function (e) {
-                if (window.innerWidth > 1017) return;
-                if (!outer.classList.contains('nav-open')) return;
-                if (!outer.contains(e.target)) closeNav();
-            });
-
-            // Close on Escape
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') closeNav();
-            });
-
-            // Handle nav links — smooth scroll for anchors and close menu
-            navLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    const href = link.getAttribute('href') || '';
-                    if (href.startsWith('#') && href.length > 1) {
-                        e.preventDefault();
-                        const target = document.querySelector(href);
-                        closeNav();
-
-                        // Use dynamic header height to offset scroll
-                        const header = outer;
-                        const headerHeight = header ? header.getBoundingClientRect().height : 0;
-                        const offset = Math.ceil(headerHeight) + 8;
-
-                        if (target) {
-                            const targetY = window.scrollY + target.getBoundingClientRect().top - offset;
-                            window.scrollTo({ top: targetY, behavior: 'smooth' });
-
-                            // accessibility: focus the target
-                            target.setAttribute('tabindex', '-1');
-                            target.focus({ preventScroll: true });
-                            setTimeout(() => target.removeAttribute('tabindex'), 1200);
-                            // update URL:
-                            history.replaceState(null, '', href);
-                        }
-                    } else {
-                        // external link: just close nav and allow default
-                        closeNav();
-                    }
-                });
-            });
-
-            // Prevent page jump while nav locked (optional scrolled background prevention)
-            // Add this CSS rule to your stylesheet:
-            // html.nav-locked, body.nav-locked { height: 100%; overflow: hidden; }
-
-        })();
-    </script>
-
+    
 
 
 </body>

@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  /* list-style-type: none; */
   color: black;
   font-family: Montserrat, sans-serif;
 }
@@ -12,11 +11,6 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(87px);
-}
-
-html.nav-locked, body.nav-locked {
-  height: 100%;
-  overflow: hidden;
 }
 
 #initial_nav_container {
@@ -28,6 +22,8 @@ html.nav-locked, body.nav-locked {
   border-bottom: 1px solid rgba(235, 235, 235, 0.05);
 }
 
+
+
 #main_container {
   max-width: 1440px;
   margin: 0 auto;
@@ -35,148 +31,10 @@ html.nav-locked, body.nav-locked {
 }
 
 
-/* style for the hamburger toggle (desktop-hidden) */
-.nav-toggle {
-  display: none;
-  /* only visible on small screens */
-  background: transparent;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  padding: 6px;
-}
-
-/* hamburger lines */
-.nav-toggle .hamburger {
-  display: inline-block;
-  width: 22px;
-  height: 2px;
-  background: #0b1220;
-  position: relative;
-  transition: transform .2s ease;
-}
-
-.nav-toggle .hamburger::before,
-.nav-toggle .hamburger::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #0b1220;
-  transition: transform .2s ease, top .2s ease, bottom .2s ease, opacity .2s ease;
-}
-
-.nav-toggle .hamburger::before {
-  top: -7px;
-}
-
-.nav-toggle .hamburger::after {
-  bottom: -7px;
-}
-
-/* when open, cross animation */
-#navigation_container.nav-open .nav-toggle .hamburger {
-  background: transparent;
-}
-
-#navigation_container.nav-open .nav-toggle .hamburger::before {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-#navigation_container.nav-open .nav-toggle .hamburger::after {
-  transform: rotate(-45deg);
-  bottom: 0;
-}
-
 #navigation_container {
   width: 75%;
   max-width: 1440px;
   margin: 0 auto;
-}
-
-/* mobile layout */
-/* ---------- mobile dropdown (improved) ---------- */
-@media (max-width: 1017px) {
-
-  /* show toggle */
-  .nav-toggle { display: inline-flex; }
-
-  /* outer nav container should be full width and positioned */
-  #initial_nav_container {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10000;
-    background: rgba(255,255,255,0.98);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-  }
-
-  /* center inner content inside the fixed bar */
-  #navigation_container {
-    width: 75%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  /* dropdown card now sits relative to the full-width fixed parent */
-  #initial_nav_container .nav_buttons_container {
-    position: absolute;
-    top: calc(var(--header-h) + 8px); /* appears just below header */
-    left: 12px;
-    right: 12px;
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    border: 1px solid rgba(15,23,42,0.04);
-    transform: translateY(-6px);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform .22s ease, opacity .22s ease;
-    z-index: 10001; /* above header */
-  }
-
-  /* list becomes vertical on mobile */
-  #initial_nav_container .nav_buttons_container ul {
-    flex-direction: column;
-    gap: 8px;
-    align-items: stretch;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  #initial_nav_container .nav_buttons_container ul>li {
-    padding: 8px 10px;
-    border-radius: 8px;
-  }
-
-  #initial_nav_container .nav_buttons_container ul>li>a {
-    display: block;
-    padding: 10px;
-  }
-
-  /* open state — show dropdown */
-  #initial_nav_container.nav-open .nav_buttons_container {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* if you still want width:75% style on desktop, keep the rule for larger screens */
 }
 
 
@@ -422,10 +280,6 @@ html.nav-locked, body.nav-locked {
   height: 54px;
 }
 
-/* #work_experience .exp_details .current_pos .company_logo_part .cl_img img {
-  border-radius: 50%;
-} */
-
 #work_experience .exp_details .current_pos .cp_details .cp_company_name {
   color: #000;
   font-size: 24px;
@@ -605,6 +459,7 @@ html.nav-locked, body.nav-locked {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-block: 25px;
 }
 
 #achievements .a_gallary .a_box .title,
@@ -1107,8 +962,6 @@ html.nav-locked, body.nav-locked {
     font-size: 14px;
   }
 }
-
-/* accessibility helper (visually hidden) */
 .visually-hidden {
   position: absolute !important;
   height: 1px;
