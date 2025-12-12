@@ -788,22 +788,28 @@ html {
 }
 
 #education .institution {
-  font-size: 28px;
+  color: #000;
+  font-size: 22px;
   font-weight: 700;
-  margin: 0;
+  line-height: 24px;
 }
+
 
 #education .degree_name {
   color: #000;
   font-size: 19px;
   font-weight: 700;
   line-height: normal;
+  margin: 0;
+  padding-top: 0.2rem;
 }
 
 #education .duration,
 #education .location {
-  color: #000;
-  font-size: 19px;
+color: #000;
+    font-size: 19px;
+    margin: 0;
+    padding-top: 0.2rem;
 }
 
 /* HR base style */
@@ -1076,7 +1082,11 @@ html {
     font-size: 20px;
   }
 }
-
+@media (max-width:1060px){
+  #skills .all_skills{
+    display: block;
+  }
+}
 @media (max-width: 1024px) {
 
   #hero_area {
@@ -1117,7 +1127,20 @@ html {
   }
 
 }
-
+@media (max-width:999px){
+  #education .edu_box{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #education .edu_details{
+    justify-content: center;
+    align-items: center;
+  }
+  #education .edu_details>*{
+    text-align: center;
+  }
+}
 @media (max-width: 880px) {
   .footer-inner {
     grid-template-columns: 1fr;
@@ -1252,12 +1275,12 @@ html {
 /* MODAL OVERLAY */
 .modal {
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.55);
-  display: none; 
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 2000;
@@ -1265,8 +1288,13 @@ html {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* MODAL BOX */
@@ -1277,12 +1305,19 @@ html {
   padding: 30px;
   border-radius: 16px;
   animation: popIn .3s ease;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes popIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* CLOSE BUTTON */
