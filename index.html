@@ -1143,10 +1143,10 @@
         });
     </script>
     <script>
-        // Replace with your deployed Apps Script URL
-        const ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbyOrm-lq88IYP2GVnk2cmjNPTjHA_-v0UqoFvBdj9EQ2UFFQ8Ts6mKSZPzRrz1FOV7j/exec";
+        const ENDPOINT_URL = "https://script.google.com/macros/s/AKfycby4UsD0ycBs-nrmPuwJ5McRWGidFFJNcn5mCox5Yhi-v8aU_PNyRlkexHpGDgM8-7go/exec";
 
         const contactForm = document.getElementById("contactForm");
+
         contactForm.addEventListener("submit", async (e) => {
             e.preventDefault();
 
@@ -1155,51 +1155,56 @@
             const message = contactForm.querySelector('textarea').value.trim();
             const pageUrl = window.location.href;
 
-            // basic client-side validation
             if (!name || !email || !message) {
                 alert("Please fill all fields.");
                 return;
             }
 
-            // disable UI while sending
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             submitBtn.disabled = true;
+            const oldText = submitBtn.textContent;
             submitBtn.textContent = "Sending...";
 
             try {
+                const body = new URLSearchParams({
+                    name,
+                    email,
+                    message,
+                    page: pageUrl
+                }).toString();
+
                 const res = await fetch(ENDPOINT_URL, {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/json"
+                        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
                     },
-                    body: JSON.stringify({ name, email, message, page: pageUrl })
+                    body
                 });
 
                 const data = await res.json();
 
-                if (data && data.success) {
-                    // success UI
+                if (data.success) {
                     submitBtn.textContent = "Sent!";
-                    // optional: clear form and close modal after short delay
                     contactForm.reset();
+
                     setTimeout(() => {
                         document.getElementById("contactModal").style.display = "none";
                         submitBtn.disabled = false;
-                        submitBtn.textContent = "Send Message";
+                        submitBtn.textContent = oldText;
                     }, 800);
                 } else {
-                    throw new Error(data && data.error ? data.error : "Server error");
+                    throw new Error(data.error || "Server error");
                 }
 
             } catch (err) {
                 console.error(err);
                 alert("Could not send message. Try again later.");
                 submitBtn.disabled = false;
-                submitBtn.textContent = "Send Message";
+                submitBtn.textContent = oldText;
             }
         });
-
     </script>
+
 
 </body>
 
