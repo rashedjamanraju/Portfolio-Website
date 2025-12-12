@@ -24,7 +24,7 @@
 
 <body>
 
-   
+
     <div id="initial_nav_container">
         <div id="navigation_container">
             <a href="">
@@ -32,8 +32,10 @@
                     <img src="./images/logo/sacrifice-demo.png" alt="" />
                 </div>
             </a>
-            
-            <nav class="nav_buttons_container">
+            <button id="navToggle" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav id="mainNav" class="nav_buttons_container">
                 <ul>
                     <li>
                         <a href="#work_experience">
@@ -76,17 +78,19 @@
                         </a>
                     </li>
                     <li>
-                        <div class="button_icons_and_btn_name">
-                            <span class="btn_name special_btn">More</span>
-                            <i class="fas fa-chevron-down menu-item-icon dropdown-icon" aria-hidden="true"></i>
-                        </div>
+                        <a href="#education">
+                            <div class="button_icons_and_btn_name">
+                                <i class="fas fa-folder-open menu-item-icon" aria-hidden="true"></i>
+                                <span class="btn_name">Education</span>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </nav>
         </div>
     </div>
 
-     <!--Main container section this will be centered aligned-->
+    <!--Main container section this will be centered aligned-->
     <div id="main_container">
         <!-- hero area section -->
         <div id="hero_area">
@@ -1062,8 +1066,29 @@
             <p>© <span id="year"></span> Rashed Jaman Raju — All rights reserved.</p>
         </div>
     </footer>
-    
 
+
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const mainNav = document.getElementById("mainNav");
+
+  // Toggle dropdown on hamburger click
+  navToggle.addEventListener("click", () => {
+    const open = navToggle.classList.toggle("open");
+    mainNav.classList.toggle("open", open);
+  });
+
+  // Auto close menu when clicking any section link
+  const navLinks = mainNav.querySelectorAll('a[href^="#"]');
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      // Close menu
+      mainNav.classList.remove("open");
+      navToggle.classList.remove("open");
+    });
+  });
+</script>
 
 </body>
 

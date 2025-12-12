@@ -35,13 +35,7 @@ html {
   width: 75%;
   max-width: 1440px;
   margin: 0 auto;
-}
-
-
-
-
-#navigation_container {
-  display: flex;
+    display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -50,6 +44,104 @@ html {
 
 #navigation_container .user_name_logo_container {
   width: 237px;
+}
+/* HAMBURGER BUTTON */
+#navToggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+#navToggle .hamburger {
+  width: 24px;
+  height: 3px;
+  background: #000;
+  display: block;
+  position: relative;
+  transition: .3s;
+}
+
+#navToggle .hamburger::before,
+#navToggle .hamburger::after {
+  content: "";
+  width: 24px;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  transition: .3s;
+}
+
+#navToggle .hamburger::before { top: -7px; }
+#navToggle .hamburger::after  { top: 7px; }
+
+/* When menu open → turn into X */
+#navToggle.open .hamburger {
+  background: transparent;
+}
+#navToggle.open .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+#navToggle.open .hamburger::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* RESPONSIVE NAV — 1024px */
+@media (max-width: 1024px) {
+
+  /* Show hamburger */
+  #navToggle {
+    display: block;
+  }
+
+  /* Initially hide nav */
+  #mainNav {
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: #fff;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: .3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  /* When opened */
+  #mainNav.open {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  /* Vertical menu style */
+  #mainNav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  #mainNav ul li {
+    width: 100%;
+  }
+
+  #mainNav ul li a {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  /* Space fix */
+  #navigation_container {
+    position: relative;
+  }
 }
 
 #navigation_container .user_name_logo_container img {
@@ -893,6 +985,7 @@ html {
 }
 
 
+
 /*Responsive media query*/
 @media (max-width:1380px) {
 
@@ -965,7 +1058,10 @@ html {
 
 
 @media (max-width:768px) {
-
+  #navigation_container{
+    max-width: 730px;
+    width: 100%;
+  }
   #main_container {
     max-width: 730px;
     width: 100%;
