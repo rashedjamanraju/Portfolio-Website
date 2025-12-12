@@ -531,6 +531,7 @@ html {
   /* width: 100%; */
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin-block-start: 15px;
 
 }
 
@@ -659,10 +660,9 @@ html {
 
 
 #problem_solving .small_description,
-#projects .small_description {
+#projects .small_description,#skills .all_skills {
   color: #868e96 !important;
   color: #868e96 !important;
-  margin-block-end: 50px;
   margin-block-start: 15px;
 }
 #projects .project-technologies{
@@ -1176,7 +1176,7 @@ html {
   #achievements .a_title,
   #problem_solving .ps_title,
   #skills .s_title,
-  #projects .ps_title {
+  #projects .ps_title ,#education .edu_title{
     font-size: 30px;
   }
 
