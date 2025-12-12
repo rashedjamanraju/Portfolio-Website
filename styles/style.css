@@ -90,8 +90,8 @@ html {
   top: 0;
 }
 
-/* RESPONSIVE NAV — 1024px */
-@media (max-width: 1024px) {
+/* RESPONSIVE NAV — 1525px */
+@media (max-width: 1525px) {
 
   /* Show hamburger */
   #navToggle {
