@@ -1205,6 +1205,65 @@
         });
     </script>
 
+    <script>
+        const SUBSCRIBE_ENDPOINT = "https://script.google.com/macros/s/AKfycby8uLnJZ75ZGQMOzD8i_aA9Kpvs6JIHdYk-SamrwReEvn4_t4lK1nqL8m0BL_MsGOgA/exec"; // replace
+
+        const subscribeForm = document.getElementById("footerSubscribeForm");
+
+        subscribeForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const emailInput = document.getElementById("footerEmail");
+            const email = (emailInput.value || "").trim();
+            if (!email) {
+                alert("Please enter your email.");
+                return;
+            }
+
+            const submitBtn = subscribeForm.querySelector('button[type="submit"]');
+            const oldText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Subscribing...";
+
+            try {
+                // Use URLSearchParams to avoid CORS preflight (no application/json)
+                const body = new URLSearchParams({
+                    email: email,
+                    page: window.location.href,
+                    source: "footer-subscribe"
+                }).toString();
+
+                const res = await fetch(SUBSCRIBE_ENDPOINT, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+                    },
+                    body
+                });
+
+                // Apps Script returns JSON as text
+                const data = await res.json();
+
+                if (data && data.success) {
+                    // UI: success
+                    emailInput.value = "";
+                    submitBtn.textContent = "Subscribed ✓";
+                    // small friendly toast instead of alert
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = oldText;
+                    }, 1500);
+                } else {
+                    throw new Error((data && data.error) || "Subscribe failed");
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Could not subscribe. Please try again later.");
+                submitBtn.disabled = false;
+                submitBtn.textContent = oldText;
+            }
+        });
+    </script>
 
 </body>
 
