@@ -80,8 +80,8 @@
                     <li>
                         <a href="#education">
                             <div class="button_icons_and_btn_name">
-                                <i class="fas fa-folder-open menu-item-icon" aria-hidden="true"></i>
-                                <span class="btn_name">Education</span>
+                                <i class="fas fa-graduation-cap menu-item-icon" aria-hidden="true"></i> <span
+                                    class="btn_name">Education</span>
                             </div>
                         </a>
                     </li>
@@ -1084,6 +1084,29 @@
                 navToggle.classList.remove("open");
             });
         });
+    </script>
+    <script>
+        (function () {
+            const nav = document.getElementById('initial_nav_container');
+            let last = window.scrollY;
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (ticking) return;
+                window.requestAnimationFrame(() => {
+                    const y = window.scrollY;
+                    if (y > last && y > 120) {
+                        nav.style.transform = 'translateY(-120%)';
+                        nav.style.transition = 'transform .35s ease';
+                    } else {
+                        nav.style.transform = 'translateY(0)';
+                        nav.style.transition = 'transform .35s ease';
+                    }
+                    last = y;
+                    ticking = false;
+                });
+                ticking = true;
+            });
+        })();
     </script>
 
 </body>
