@@ -911,7 +911,7 @@ html {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1040px) {
  
   #hero_area {
     display: flex;
@@ -995,11 +995,17 @@ html {
   #work_experience .we_title {
     font-size: 30px;
   }
-
+  #work_experience .exp_details .current_pos{
+    padding: 1rem 1.5rem;
+  }
   #work_experience .exp_details .current_pos .cp_details .cp_company_name {
     font-size: 20px;
   }
-
+#work_experience .exp_details .current_pos .company_logo_part .cl_img{
+  width: 50px;
+  height: 50px;
+}
+ 
   #work_experience .exp_details .current_pos .cp_details .cp_company_my_pos {
     font-size: 18px;
   }
