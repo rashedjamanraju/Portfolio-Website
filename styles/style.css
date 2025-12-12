@@ -1247,3 +1247,82 @@ html {
     font-size: 14px;
   }
 }
+
+
+/* MODAL OVERLAY */
+.modal {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn .3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* MODAL BOX */
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 480px;
+  padding: 30px;
+  border-radius: 16px;
+  animation: popIn .3s ease;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* CLOSE BUTTON */
+.close {
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+  color: #444;
+}
+
+/* FORM INPUTS */
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d1d1;
+  font-size: 15px;
+}
+
+#contactForm textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+#contactForm button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #0645ad;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#contactForm button:hover {
+  background: #043c97;
+}
