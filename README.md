@@ -111,14 +111,6 @@ const SUBSCRIBE_ENDPOINT = "YOUR_SUBSCRIBE_SCRIPT_URL";
 - **Images:** Replace images in the `images/` directory
 - **Content:** Update text content for projects, skills, and achievements
 
----
-
-## 📸 Screenshots
-
-<!-- Add screenshots here -->
-_Coming soon..._
-
----
 
 ## 🎯 Sections Overview
 
