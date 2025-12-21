@@ -2,7 +2,6 @@
 
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://rashedjamanraju.github.io/Portfolio-Website/)
 [![GitHub Repo](https://img.shields.io/badge/repo-github-blue)](https://github.com/rashedjamanraju/Portfolio-Website/)
-[![License:  MIT](https://img.shields.io/badge/License-MIT-yellow. svg)](https://opensource.org/licenses/MIT)
 
 A fully responsive personal portfolio website showcasing skills, projects, achievements, and competitive programming experience.  Built with modern web technologies and best practices.
 
