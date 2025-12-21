@@ -1,6 +1,7 @@
 # 🌐 Personal Portfolio – Rashed Jaman Raju
 
 **Live Site:** [https://rashedjamanraju.github.io/Portfolio-Website/](https://rashedjamanraju.github.io/Portfolio-Website/)  
+**Figma Design:** [https://www.figma.com/design/dvESTbhkPtD8hC3zh7I8nK/final-portfolio?node-id=0-1&t=1sttj4eJtHWEmqd9-1](https://www.figma.com/design/dvESTbhkPtD8hC3zh7I8nK/final-portfolio?node-id=0-1&t=1sttj4eJtHWEmqd9-1)
 **Repository:** [github.com/rashedjamanraju/Portfolio-Website](https://github.com/rashedjamanraju/Portfolio-Website)
 
 A fully responsive personal portfolio website showcasing skills, projects, achievements, and competitive programming experience. Built with HTML, CSS, and JavaScript.
